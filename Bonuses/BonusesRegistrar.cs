@@ -35,7 +35,7 @@ namespace CodeBase.Logic.Bonuses
             currencyBlock.OnDestroyed += UnregisterCurrencyBlock;
         }
 
-        private void UnregisterBonusBlock(BonusBlock bonusBlock, BonusBlockDestroyedEventArgs eventArgs)
+        private void UnregisterBonusBlock(BonusBlock bonusBlock)
         {
             bonusBlock.OnDestroyed -= UnregisterBonusBlock;
             _eventsHandler.UnregisterEmitter(bonusBlock);
